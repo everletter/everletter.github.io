@@ -1,0 +1,659 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>EverLetter</title>
+    <link rel="canonical" href="https://everletter.github.io">
+
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+          integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <link rel="stylesheet" href="assets/css/app.css">
+</head>
+<body>
+
+<nav class="navbar navbar-expand-lg" style="background-color: #e3f2fd;">
+    <div class="container-md" style="max-width: 1200px;">
+        <a class="navbar-brand" href="https://everletter.github.io">
+            <strong>EverLetter</strong>
+        </a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent"
+                aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+            <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+                <li class="nav-item">
+                    <a class="nav-link" href="#about">О проекте</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#write-letter">Написать письмо</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/letters">Публичные письма</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/reviews">Отзывы</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="/blog">Статьи</a>
+                </li>
+            </ul>
+            <a class="btn btn-outline-primary" href="#write-letter">Написать письмо</a>            
+        </div>
+    </div>
+</nav>
+
+    <style>
+        .feature-icon {
+            width: 4rem;
+            height: 4rem;
+            border-radius: .75rem;
+        }
+
+        .icon-square {
+            width: 3rem;
+            height: 3rem;
+            border-radius: .75rem;
+        }
+
+        .text-shadow-1 {
+            text-shadow: 0 .125rem .25rem rgba(0, 0, 0, .25);
+        }
+
+        .text-shadow-2 {
+            text-shadow: 0 .25rem .5rem rgba(0, 0, 0, .25);
+        }
+
+        .text-shadow-3 {
+            text-shadow: 0 .5rem 1.5rem rgba(0, 0, 0, .25);
+        }
+
+        .card-cover {
+            background-repeat: no-repeat;
+            background-position: center center;
+            background-size: cover;
+        }
+
+        .feature-icon-small {
+            width: 3rem;
+            height: 3rem;
+            background-color: #e3f2fd;
+            text-align: center;
+        }
+
+        .feature-icon-small i {
+            color: rgb(13, 110, 253);
+        }
+    </style>
+
+    <div class="px-4 pt-5 mb-5 text-center border-bottom" style="background-color: #e3f2fd;">
+    <h1 class="display-4 fw-bold text-body-emphasis mt-5">Письмо в будущее</h1>
+    <div class="col-lg-6 mx-auto">
+        <p class="lead mb-4">Отправь послание себе завтрашнему. Расскажи о своей жизни сейчас. Нарисуй в своем воображении будущее о котором мечтаешь.</p>
+        <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+            <a href="#write-letter" type="button" class="btn btn-primary btn-lg px-4 me-sm-3">Написать письмо</a>
+        </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+        <div class="container px-5">
+            
+            <img src="assets/img/bootstrap-themes.png" class="img-fluid mb-4" alt="Example image"
+                 width="700" height="500" loading="lazy">
+        </div>
+    </div>
+</div>
+    <div class="container-lg" style="max-width: 1200px;">
+        <div class="row mt-5 pt-5">
+    <div class="col" id="about">
+        <h2 class="fw-bold">О проекте</h2>
+    </div>
+</div>
+<div class="row mt-3">
+    <div class="col-lg-6">
+        <p>Путешествие во&nbsp;времени стало реальностью&nbsp;&mdash; по&nbsp;крайней мере, для ваших мыслей и&nbsp;слов! Наш инновационный сервис &laquo;Письмо в&nbsp;будущее&raquo; позволяет вам отправить послание самому себе через годы.</p>
+        <p>Представьте удивление и&nbsp;волнение, когда однажды вы&nbsp;получите письмо из&nbsp;прошлого&nbsp;&mdash; от&nbsp;себя, которым вы&nbsp;были годы назад!</p>
+    </div>
+    <div class="col-lg-6">
+        <p>Это больше, чем просто сервис&nbsp;&mdash; это возможность связать прошлое, настоящее и&nbsp;будущее, создавая уникальную временную капсулу ваших мыслей и&nbsp;чувств.</p>
+        <p>Отправьте письмо в&nbsp;будущее уже сегодня и&nbsp;подарите себе незабываемый момент завтра!</p>
+    </div>
+</div>
+        <div class="row mt-5 pt-5">
+    <div class="col">
+        <h2 class="fw-bold">Вопросы самому себе</h2>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-4 align-items-md-center g-5 py-5">
+
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-chat-left"></i>
+        </div>
+        <p class="text-body-secondary">О чем бы вы хотели спросить себя из будущего?</p>
+    </div>
+
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-1-square"></i>
+        </div>
+        <p class="text-body-secondary">Какое единственное послание вы бы отправили себе сегодняшнему?</p>
+    </div>
+
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-lightning-charge"></i>
+        </div>
+        <p class="text-body-secondary">Какие ключевые идеи вы считаете важным передать своему будущему "я"?</p>
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-emoji-frown"></i>
+        </div>
+        <p class="text-body-secondary">Какие несовершенные поступки могут вызвать у вас сожаление в будущем?</p>
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-clock-history"></i>
+        </div>
+        <p class="text-body-secondary">Что вы из будущего должны обязательно успеть сделать?</p>
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-arrows-collapse-vertical"></i>
+        </div>
+        <p class="text-body-secondary">Какие жизненные уроки вы хотели бы усвоить в первую очередь?</p>
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-signpost-split"></i>
+        </div>
+        <p class="text-body-secondary">Какие мечты вдохновляют вас двигаться вперед?</p>
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-megaphone"></i>
+        </div>
+        <p class="text-body-secondary">Если бы у вас была возможность обратиться к будущему себе всего в трех
+            предложениях, что бы вы сказали?</p>
+    </div>
+
+</div>
+        <style>
+    .list-group {
+        width: 100%;
+        max-width: 460px;
+        margin-inline: 1.5rem;
+    }
+
+    .form-check-input:checked + .form-checked-content {
+        opacity: .5;
+    }
+
+    .form-check-input-placeholder {
+        border-style: dashed;
+    }
+
+    [contenteditable]:focus {
+        outline: 0;
+    }
+
+    .list-group-checkable .list-group-item {
+        cursor: pointer;
+    }
+
+    .list-group-item-check {
+        position: absolute;
+        clip: rect(0, 0, 0, 0);
+    }
+
+    .list-group-item-check:hover + .list-group-item {
+        background-color: var(--bs-secondary-bg);
+    }
+
+    .list-group-item-check:checked + .list-group-item {
+        color: #fff;
+        background-color: var(--bs-primary);
+        border-color: var(--bs-primary);
+    }
+
+    .list-group-item-check[disabled] + .list-group-item,
+    .list-group-item-check:disabled + .list-group-item {
+        pointer-events: none;
+        filter: none;
+        opacity: .5;
+    }
+
+    .list-group-radio .list-group-item {
+        cursor: pointer;
+        border-radius: .5rem;
+    }
+
+    .list-group-radio .form-check-input {
+        z-index: 2;
+        margin-top: -.5em;
+    }
+
+    .list-group-radio .list-group-item:hover,
+    .list-group-radio .list-group-item:focus {
+        background-color: var(--bs-secondary-bg);
+    }
+
+    .list-group-radio .form-check-input:checked + .list-group-item {
+        background-color: var(--bs-body);
+        border-color: var(--bs-primary);
+        box-shadow: 0 0 0 2px var(--bs-primary);
+    }
+
+    .list-group-radio .form-check-input[disabled] + .list-group-item,
+    .list-group-radio .form-check-input:disabled + .list-group-item {
+        pointer-events: none;
+        filter: none;
+        opacity: .5;
+    }
+
+</style>
+
+<form method="post" action="/review">
+    <input type="hidden" name="_token" value="cTgGCb3BxNDH436bAchpo8lBIq8gBls56i8LP5gu" autocomplete="off">    <div class="row my-5 pt-5">
+        <div class="col-lg-8">
+            <h3 class="fw-bold" id="write-letter">Написать письмо в будущее</h3>
+        </div>
+    </div>
+    <div class="row mb-5 pb-5">
+        <div class="col-lg-8">
+            <div class="form-group">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="review_name" name="review_name"
+                           placeholder="Имя получателя">
+                    <label for="floatingInput">Имя получателя</label>
+                </div>
+                                <div class="form-floating mb-3">
+                    <input type="email" class="form-control" id="review_name" name="review_name"
+                           placeholder="Email получателя">
+                    <label for="floatingInput">Email получателя</label>
+                </div>
+                                <div class="form-group my-4">
+                    <div id="emailHelp" class="form-text opacity-75 mb-2 ps-2">Дата доставки (в будущем)</div>
+                    <input id="startDate" class="form-control" type="date" />
+                </div>
+                                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Ваше письмо" id="review_text" name="review_text"
+                              style="height: 300px"></textarea>
+                    <label for="floatingTextarea2">Ваше письмо</label>
+                </div>
+                            </div>
+            <input type="submit" class="btn btn-lg btn-primary mt-5" value="Оплатить и отправить">
+
+        </div>
+        <div class="col-lg-4">
+
+            <div class="list-group list-group-radio d-grid gap-2 border-0">
+                <div class="position-relative">
+                    <input class="form-check-input position-absolute top-50 end-0 me-3 fs-5" type="radio"
+                           name="listGroupRadioGrid" id="listGroupRadioGrid2" value="" checked="">
+                    <label class="list-group-item py-3 pe-5" for="listGroupRadioGrid2">
+                        <strong class="fw-semibold">Письмо в будущее за 99₽</strong>
+                        <span class="d-block small opacity-75 mt-2">&mdash; Хранение до 10 лет</span>
+                        <span class="d-block small opacity-75">&mdash; Объем текста не ограниченн</span>
+                    </label>
+                </div>
+                <div class="position-relative">
+                    <input class="form-check-input position-absolute top-50 end-0 me-3 fs-5" type="radio"
+                           name="listGroupRadioGrid" id="listGroupRadioGrid1" value="">
+                    <label class="list-group-item py-3 pe-5" for="listGroupRadioGrid1">
+                        <strong class="fw-semibold">Мини-письмо за 49₽</strong>
+                        <span class="d-block small opacity-75 mt-2">&mdash; Хранение до 3 лет</span>
+                        <span class="d-block small opacity-75">&mdash; Текст не более 1000 знаков</span>
+                    </label>
+                </div>
+                <div class="position-relative">
+                    <input class="form-check-input position-absolute top-50 end-0 me-3 fs-5" type="radio"
+                           name="listGroupRadioGrid" id="listGroupRadioGrid4" value="" disabled="">
+                    <label class="list-group-item py-3 pe-5" for="listGroupRadioGrid4">
+                        <strong class="fw-semibold">Фото-письмо за 149₽</strong>
+                        <span class="d-block small opacity-75">Тариф совсем скоро будет доступен…</span>
+                        <span class="d-block small opacity-75 mt-2">&mdash; Все, что в обычном письме</span>
+                        <span class="d-block small opacity-75">&mdash; Можно прикрепить фото или файл</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </div>
+</form>
+
+        <div class="row mt-5 pt-5">
+    <div class="col">
+        <h2 class="fw-bold">Зачем писать в будущее?</h2>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+    <div class="col">
+        <p>Написание писем самому себе в&nbsp;будущее&nbsp;&mdash; это уникальный опыт самопознания и&nbsp;личностного
+            роста. Этот процесс:</p>
+        <ul>
+            <li>Помогает сформулировать сложные вопросы и&nbsp;найти на&nbsp;них ответы</li>
+            <li>Служит инструментом рефлексии и&nbsp;самотерапии</li>
+            <li>Развивает навыки творческого письма и&nbsp;четкого выражения мыслей</li>
+            <li>Дает возможность помечтать и&nbsp;визуализировать свое будущее</li>
+        </ul>
+    </div>
+    <div class="col">
+        <p>Задавая себе глубокие вопросы, вы&nbsp;открываете новые грани своей личности:</p>
+        <ul>
+            <li>Что для вас самое главное в&nbsp;жизни?</li>
+            <li>Чем вы&nbsp;гордитесь, а&nbsp;о&nbsp;чем сожалеете?</li>
+            <li>Какими жизненными правилами вы&nbsp;руководствуетесь?</li>
+            <li>Чего вы&nbsp;боитесь в&nbsp;будущем и&nbsp;о&nbsp;чем мечтаете?</li>
+            <li>Что хотите в&nbsp;себе изменить и&nbsp;чему научиться?</li>
+        </ul>
+    </div>
+    <div class="col">
+        <p>Традиция писать такие письма распространена в&nbsp;школах, на&nbsp;праздники или в&nbsp;особые дни, например,
+            День мечты. Иногда их&nbsp;даже закладывают в&nbsp;основания памятников, создавая настоящие &laquo;капсулы
+            времени&raquo;, которые вскрывают спустя десятилетия.</p>
+        <p>Напишите письмо себе в&nbsp;будущее&nbsp;&mdash; и&nbsp;подарите себе уникальный опыт путешествия во&nbsp;времени,
+            соединяющий ваше настоящее с&nbsp;будущим, о&nbsp;котором вы&nbsp;мечтаете.</p>
+    </div>
+</div>
+        <div class="row mt-5 pt-5">
+    <div class="col">
+        <h2 class="fw-bold">Как это работает?</h2>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-4 align-items-md-center g-5 py-5">
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-1-square"></i>
+        </div>
+        <p class="text-body-secondary mt-3">
+            <strong>Напишите письмо</strong>: Поделитесь своими мыслями, мечтами или целями с будущим собой.
+        </p>
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-2-square"></i>
+        </div>
+        <p class="text-body-secondary mt-3">
+            <strong>Укажите email</strong>: Введите адрес электронной почты, на который хотите получить письмо.
+        </p>
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-3-square"></i>
+        </div>
+        <p class="text-body-secondary mt-3">
+            <strong>Выберите дату</strong>: Решите, когда в будущем вы хотите получить это послание.
+        </p>
+    </div>
+    <div class="col d-flex flex-column gap-2">
+        <div
+            class="feature-icon-small d-inline-flex align-items-center justify-content-center bg-gradient fs-4 rounded-3">
+            <i class="bi bi-4-square"></i>
+        </div>
+        <p class="text-body-secondary mt-3">
+            <strong>Отправьте</strong>: Мы сохраним ваше письмо и доставим его в указанный день.
+        </p>
+    </div>
+</div>
+        <div class="row mt-5 pt-5">
+    <div class="col">
+        <h2 class="fw-bold">Публичные письма</h2>
+        <p>Авторы этих писем пожелали сделать их публичными после прочтения. Надеемся, они вас вдохновят на написание
+            своего письма.</p>
+    </div>
+</div>
+<div class="row row-cols-1 row-cols-md-3 g-4 mt-3">
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/letter/porro-culpa-aut-possimus" style="text-decoration: none; background-color: #e3f2fd; border: none">
+                <div class="card-body px-4 pt-4">
+                    <p class="card-text">Впрочем, и то в минуту самого головоломного дела. Но Чичиков прикинулся, как будто бы везет, тогда как рука седьмого так...</p>
+                </div>
+                <div class="card-footer pb-4 px-4" style="border-top: none; background-color: #e3f2fd;">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/letter/reiciendis-voluptates-magni-aut-veniam-voluptatibus-consequatur-tempora" style="text-decoration: none; background-color: #e3f2fd; border: none">
+                <div class="card-body px-4 pt-4">
+                    <p class="card-text">Глава вторая Уже более недели приезжий господин осматривал свою комнату, внесены были его мысли. «Славная бабешка! — сказал — Манилов,...</p>
+                </div>
+                <div class="card-footer pb-4 px-4" style="border-top: none; background-color: #e3f2fd;">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/letter/nostrum-qui-recusandae-unde-dolorem-quam" style="text-decoration: none; background-color: #e3f2fd; border: none">
+                <div class="card-body px-4 pt-4">
+                    <p class="card-text">Павел Иванович! Чичиков, точно, увидел даму, которую он шел, никак не будет: или нарежется в буфете таким образом, что щеки...</p>
+                </div>
+                <div class="card-footer pb-4 px-4" style="border-top: none; background-color: #e3f2fd;">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/letter/doloribus-omnis-quisquam-distinctio-magni-veniam-expedita" style="text-decoration: none; background-color: #e3f2fd; border: none">
+                <div class="card-body px-4 pt-4">
+                    <p class="card-text">Обед, как видно, на все, что ни есть ненужного, что Акулька у нас нет — никого… Вот только иногда почитаешь...</p>
+                </div>
+                <div class="card-footer pb-4 px-4" style="border-top: none; background-color: #e3f2fd;">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/letter/eius-quo-at-ullam" style="text-decoration: none; background-color: #e3f2fd; border: none">
+                <div class="card-body px-4 pt-4">
+                    <p class="card-text">Селифану, поворотивши к крестьянским избам, отъехать таким образом, что прежде попадалось ему на часть и доставался всегда овес потуже и...</p>
+                </div>
+                <div class="card-footer pb-4 px-4" style="border-top: none; background-color: #e3f2fd;">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/letter/quis-voluptatem-qui-sint-distinctio" style="text-decoration: none; background-color: #e3f2fd; border: none">
+                <div class="card-body px-4 pt-4">
+                    <p class="card-text">Подходишь ближе, глядишь — точно Иван Петрович! «Эхе-хе», — думаешь найти там банчишку и добрую бутылку какого-нибудь бонбона. — Послушай,...</p>
+                </div>
+                <div class="card-footer pb-4 px-4" style="border-top: none; background-color: #e3f2fd;">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+    </div>
+<div class="row mt-4 mb-5 pb-3">
+    <div class="col-12 text-center">
+        <a class="text-secondary" href="/letters">Все публичные письма</a>
+    </div>
+</div>
+        <div class="row row-cols-1 mt-5 pt-5">
+    <div class="col">
+        <h2 class="fw-bold">Уже получили письма</h2>
+    </div>
+</div>
+<div class="row mt-4">
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/review/ut-et-consectetur-totam" style="text-decoration: none">
+                <div class="card-body px-4 pt-4">
+                    <h5 class="card-title mb-3">Якушева Розалина Андреевна</h5>
+                    <p class="card-text">В нашем — полку был поручик, прекраснейший и образованнейший человек, который — посчастливилось ему мимоходом отрезать, вынимая что-то из брички....</p>
+                </div>
+                <div class="card-footer bg-white pb-4 px-4" style="border-top: none">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/review/aut-repellat-commodi-nam-assumenda-aliquid" style="text-decoration: none">
+                <div class="card-body px-4 pt-4">
+                    <h5 class="card-title mb-3">Павел Борисович Бирюков</h5>
+                    <p class="card-text">Даже самая погода весьма кстати прислужилась: день был не в одном окошке и досягнул туманною струею до забора, указавши нашим...</p>
+                </div>
+                <div class="card-footer bg-white pb-4 px-4" style="border-top: none">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/review/rerum-pariatur-iusto-molestiae-quis" style="text-decoration: none">
+                <div class="card-body px-4 pt-4">
+                    <h5 class="card-title mb-3">Леонид Евгеньевич Щербаков</h5>
+                    <p class="card-text">Хозяйка вышла с тем чтобы заметить, что и значит. Это чтение совершалось более в лежачем положении в передней, на кровати...</p>
+                </div>
+                <div class="card-footer bg-white pb-4 px-4" style="border-top: none">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/review/rerum-et-nam-recusandae" style="text-decoration: none">
+                <div class="card-body px-4 pt-4">
+                    <h5 class="card-title mb-3">Петухова Юлия Владимировна</h5>
+                    <p class="card-text">Но Чичиков поблагодарил, сказав, что еще хуже, может быть, он говорил и о лошадином заводе; говорили ли о хороших собаках,...</p>
+                </div>
+                <div class="card-footer bg-white pb-4 px-4" style="border-top: none">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/review/impedit-quam-enim-quas-aperiam-laborum" style="text-decoration: none">
+                <div class="card-body px-4 pt-4">
+                    <h5 class="card-title mb-3">Кузьма Львович Вишняков</h5>
+                    <p class="card-text">Понимаете ли? это просто — жидомор! Ведь я на обывательских приехал! — Вот тебе на, будто не помнишь! — Нет,...</p>
+                </div>
+                <div class="card-footer bg-white pb-4 px-4" style="border-top: none">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+            <div class="col-lg-4 col-md-6 mb-4">
+            <a class="card h-100" href="/review/quae-labore-sint-dolores-autem-quia-soluta-dolorem" style="text-decoration: none">
+                <div class="card-body px-4 pt-4">
+                    <h5 class="card-title mb-3">Орлов Дмитрий Иванович</h5>
+                    <p class="card-text">Нет, нет, я не держу. — Да как же мне писать расписку? прежде нужно видеть — деньги. — Все, что...</p>
+                </div>
+                <div class="card-footer bg-white pb-4 px-4" style="border-top: none">
+                    <small class="text-secondary">Написано 02.02.2025</small>
+                </div>
+            </a>
+        </div>
+    </div>
+<div class="row mt-4 mb-5 pb-5">
+    <div class="col-12 text-center">
+        <a class="text-secondary" href="/reviews">Все отзывы</a>
+    </div>
+</div>
+
+        <div class="row mt-5 pt-5">
+    <div class="col">
+        <h3 class="fw-bold">Оставьте отзыв</h3>
+        <p class="mb-4">Если не сложно, поделитесь впечатлениями от отправленного или полученного письма</p>
+    </div>
+</div>
+<div class="row mt-4 mb-5 pb-5">
+    <div class="col-lg-7">
+
+        <form method="post" action="/review">
+            <input type="hidden" name="_token" value="cTgGCb3BxNDH436bAchpo8lBIq8gBls56i8LP5gu" autocomplete="off">            <div class="form-group">
+                <div class="form-floating mb-3">
+                    <input type="text" class="form-control" id="review_name" name="review_name" placeholder="Ваше имя">
+                    <label for="floatingInput">Ваше имя</label>
+                </div>
+                <div class="form-floating">
+                    <textarea class="form-control" placeholder="Отзыв" id="review_text" name="review_text" style="height: 200px"></textarea>
+                    <label for="floatingTextarea2">Отзыв</label>
+                </div>
+                            </div>
+            <input type="submit" class="btn btn-primary mt-4" value="Добавить">
+        </form>
+    </div>
+    <div class="col-lg-5">
+        <h5 class="text-body-secondary mb-3">Зачем оставлять отзыв?</h5>
+        <p class="text-body-secondary">Ваш опыт может стать ценным ориентиром для тех, кто только задумывается об использовании этого уникального сервиса. Делясь своими впечатлениями, вы помогаете другим людям принять решение и, возможно, открыть для себя новый способ самопознания.</p>
+        <p class="text-body-secondary">Ваш отзыв может вдохновить кого-то на важные размышления о своей жизни и будущем, которые они, возможно, откладывали.</p>
+    </div>
+</div>
+
+
+    </div>
+
+<div class="container mt-5" style="max-width: 1200px;">
+    <footer class="d-flex flex-wrap justify-content-between align-items-center py-3 my-4 border-top">
+        <p class="col-md-4 mb-0 text-body-secondary">
+            <strong>EverLetter</strong>
+        </p>
+
+        <ul class="nav col-md-8 justify-content-end">
+            <li class="nav-item">
+                <a href="#about" class="nav-link px-2 text-body-secondary">
+                    О проекте
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="#write-letter" class="nav-link px-2 text-body-secondary">
+                    Написать письмо
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/letters" class="nav-link px-2 text-body-secondary">
+                    Публичные письма
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/reviews" class="nav-link px-2 text-body-secondary">
+                    Отзывы
+                </a>
+            </li>
+            <li class="nav-item">
+                <a href="/blog" class="nav-link px-2 text-body-secondary">
+                    Статьи
+                </a>
+            </li>
+        </ul>
+    </footer>
+</div>
+<!-- Yandex.Metrika counter -->
+<script type="text/javascript" >
+    (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+        m[i].l=1*new Date();
+        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+    (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+    ym(99512067, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true,
+        webvisor:true
+    });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/99512067" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+<!-- /Yandex.Metrika counter -->
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+        integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+        crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/umd/popper.min.js"
+        integrity="sha384-I7E8VVD/ismYTF4hNIPjVp/Zjvgyol6VFvRkX/vR+Vc4jQkC+hVqc2pM8ODewa9r"
+        crossorigin="anonymous"></script>
+
+</body>
+</html>
